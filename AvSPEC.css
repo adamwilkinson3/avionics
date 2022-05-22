@@ -1,0 +1,320 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    outline: none;
+}
+.button:active {
+    padding: 18%;
+  }
+body {
+    background-color: rgb(14, 29, 75);
+    display: grid;
+    grid-template: repeat(100, 1fr) / repeat(100, 1fr);
+    width: 100vw;
+    height: 100vh;
+}
+.MFD {
+    grid-area: 1 / 1 / 101 / 51;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    background-color: rgb(54, 54, 54);
+    gap: 0px;
+}
+.MFDScreen {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 7;
+    background-color: black;
+    color: lawngreen;
+}
+.button {
+    text-align: center;
+    margin: auto;
+    padding: 20%;
+    background-color: rgb(149, 156, 161);
+    border-radius: 10%;
+    cursor: pointer;
+}
+.dialBox {
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-gap: 0px;
+   justify-content: center;
+   align-items: center;
+   padding-top: 10%;
+   padding-bottom: 10%;
+}
+.dial {
+    background-color: rgb(149, 156, 161);
+    height: 60%;
+    cursor: pointer;
+}
+.top {
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+.bottom {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+.top:active {
+    transform: translateY(2px);
+}
+.bottom:active {
+    transform: translateY(-2px);
+}
+.MFDContent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100%;
+    padding-left: 9%;
+    font-weight: bold;
+    font-size: 2vh;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.undL {
+    text-decoration: underline;
+    display: grid;
+    align-items: center;
+}
+.lCol {
+    grid-area: 1 / 1 / 13 / 2;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    margin-left: -40%;
+    align-items: center;
+}
+.rCol {
+    grid-area: 1 / 5 / 13 / 6;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    text-align: right;
+    padding-right: 5%;
+    align-items: center;
+    
+}
+.selc {
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+.rColOff {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.rColReset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.rColOper {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+}
+/*******************************************************************************************************/
+.auxpower {
+    grid-area: 86 / 51 / 101 / 71;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+    background-color: rgb(54, 54, 54);
+    justify-content: center;
+    align-items: center;
+    border: 1vh grey solid;
+}
+.button3 {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    height: 90%;
+    background-color: rgb(149, 156, 161);
+    border-radius: 10%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.4vh;
+}
+.button3:active {
+    width: 75%;
+    height: 85%;
+}
+.cniCont {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4vh;
+}
+/*******************************************************************************************************/
+.icp {
+    grid-area: 1 / 51 / 51 / 101;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(9, 1fr);
+    background-color: rgb(54, 54, 54);
+    border: 1vh grey solid;
+    font-family: 'Courier New';
+    place-items: center;
+}
+.icpScreen {
+    /*background-image: linear-gradient(to right, transparent 0% 10%,black 10% 100%);*/
+    background: black;
+    width: 90%;
+    height: 90%;
+    text-transform: uppercase;
+}
+.icpInput {
+    grid-area: 2 / 1 / 3 / 4;
+    color: lawngreen;
+    display: grid;
+    grid-template: 1fr / repeat(14, 1fr);
+    place-items: center;
+    font-size: 1.8vh;
+    font-weight: bold;
+}
+.icpop {
+    color: lawngreen;
+    display: grid;
+    grid-template-columns: 1fr 19fr;
+    place-items: center left;
+    font-size: 1.6vh;
+    font-weight: bold;
+    padding-left: 5%;
+}
+.icp1 {
+    grid-area: 2 / 5 / 3 / 8;
+}
+/*
+.icpop:before {
+    content: ' \25BA';
+}
+*/
+.icp2 {
+    grid-area: 3 / 5 / 4 / 8;
+}
+.icp3 {
+    grid-area: 4 / 5 / 5 / 8;
+}
+.icp4 {
+    grid-area: 5 / 5 / 6 / 8;
+}
+.icp5 {
+    grid-area: 6 / 5 / 7 / 8;
+}
+.icpRight {
+    grid-area: 2 / 9 / 7 / 10;
+}
+.button2 {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(149, 156, 161);
+    border-radius: 10%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2.0vh;
+}
+.button2:active {
+    width: 75%;
+    height: 75%;
+}
+.triangle {
+    font-size: 2vh;
+}
+/*******************************************************************************************************/
+.powermode {
+    grid-area: 4 / 45 / 15 / 50;
+    display: grid;
+    grid-template: repeat(4, 1fr);
+    background-color: rgb(54, 54, 54);
+    border: 1vh grey solid;
+    z-index: 1;
+}
+.button5 {
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2vh;
+    overflow: hidden;
+}
+/*******************************************************************************************************/
+.ufd {
+    grid-area: 51 / 71 / 101 / 101;
+    display: grid;
+    grid-template: 1fr 10fr 1fr / repeat(3, 1fr);
+    background-color: rgb(54, 54, 54);
+    font-family: 'sans serif';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 100%;
+    font-size: 1.4vmin;
+    overflow: hidden;
+    font-family: arial;
+}
+.MFDScreen2 {
+    display: grid;
+    grid-template: repeat(14, 1fr) / 2fr 3fr 2fr;
+}
+.button4 {
+    background-color: rgb(149, 156, 161);
+    border-radius: 10%;
+    cursor: pointer;
+    width: 20%;
+    height: 80%;
+    position: relative;
+    left: 40%;
+    top: 10%;
+}
+.button4:active {
+    left: 41%;
+    top: 12%;
+    width: 18%;
+    height: 76%;
+}
+.MFDScreen2 {
+    background-color: black;
+    color: lawngreen;
+    grid-column: 1 / span 3;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+.ufdmcol {
+    text-align: center;
+}
+.ufdrcol {
+    text-align: right;
+}
+/*************************************************51 / 51 / 86 / 71******************************************************/
+.info {
+    grid-area: 51 / 51 / 86 / 71;
+    background-color: rgb(149, 156, 161);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1vh;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    height: 10%;
+    color: black;
+    height: 8%;
+    margin: 1%;
+}
+.task button {
+    padding: 4px;
+}
+.instructions {
+    margin-top: 0%;
+    height: 90%;
+    background-color: black;
+    color: white;
+}
+.info p {
+    padding: 0px 20px;
+}

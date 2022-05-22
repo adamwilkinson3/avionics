@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="AvSPEC.css">
+</head>
+<body>
+<div class="navBar">
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</div>
+<div class="MFD">
+    <div class="dialBox">
+        <button class="dial top" onclick="scrl(-1)">UP</button>
+        <button class="dial bottom" onclick="scrl(1)">DOWN</button>
+    </div>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+    <p></p>
+    <button class="button"></button>
+    <div class="MFDScreen">
+        <div class="MFDContent">
+            <div class="lCol">
+                <p></p>
+                <p id="startibit"></p>
+                <p id="stopibit"></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="rCol">
+                <p></p>
+                <div class="rColOff">
+                    <p></p>
+                    <p id="off">off</p>
+                </div>
+                <div class="rColReset">
+                    <p></p>
+                    <p id="reset">reset</p>
+                </div>
+                <div class="rColOper">
+                    <p></p>
+                    <p id="oper">oper</p>
+                </div>
+                <p></p>
+            </div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class="undL">Equip</p>
+            <p class="undL">State</p>
+            <p class="undL">Status</p>
+            <div class="selc">
+                <p id="1L">Eq1</p>
+            </div>
+            <div class="selc">
+                <p id="1C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="1R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="2L">Eq2</p>
+            </div>
+            <div class="selc">
+                <p id="2C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="2R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="3L">Eq3</p>
+            </div>
+            <div class="selc">
+                <p id="3C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="3R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="4L">Eq4</p>
+            </div>
+            <div class="selc">
+                <p id="4C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="4R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="5L">Eq5</p>
+            </div>
+            <div class="selc">
+                <p id="5C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="5R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="6L">Eq6</p>
+            </div>
+            <div class="selc">
+                <p id="6C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="6R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="7L">Eq7</p>
+            </div>
+            <div class="selc">
+                <p id="7C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="7R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="8L">Eq8</p>
+            </div>
+            <div class="selc">
+                <p id="8C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="8R">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="9L">Eq9</p>
+            </div>
+            <div class="selc">
+                <p id="9C">&nbsp</p>
+            </div>
+            <div class="selc">
+                <p id="9R">&nbsp</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="button"></button>
+    <button class="button" onclick="startibit()"></button>
+    <button class="button" onclick="off()"></button>
+    <button class="button" onclick="stopibit()"></button>
+    <button class="button" onclick="reset()"></button>
+    <button class="button"></button>
+    <button class="button" onclick="oper()"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+    <p></p>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+    <button class="button"></button>
+</div>
+
+<div class="auxpower">
+    <p class="cniCont">CNI</p>
+    <p class="cniCont">AUX</p>
+    <p class="cniCont">MODE</p>
+    <button class="button3" onclick="cniOn()"><p id="CNIon">On</p></button>
+    <button class="button3" onclick="auxOn()"><p id="AUXon">On</p></button>
+    <button class="button3" onclick="icpSel()"><p id="ICPsel">ICP</p></button>
+    <button class="button3" onclick="cniOff()"><p id="CNIoff">Off</p></button>
+    <button class="button3" onclick="auxOff()"><p id="AUXoff">Off</p></button>
+    <button class="button3" onclick="manSel()"><p id="MANsel">MAN</p></button>
+</div>
+<!-------------------------------------------------------------------------------------->
+<div class="icp">
+    <button class="button2" onclick="icpfunc(1); cominput(1)">COM1</button>
+    <button class="button2" onclick="icpfunc(2); cominput(2)">COM2</button>
+    <button class="button2" onclick="icpfunc(3)">NAV</button>
+    <button class="button2" onclick="icpfunc(4)">STPT</button>
+    <button class="button2" onclick="icpfunc(5)">IFF</button>
+    <button class="button2" onclick="icpfunc(6)">ALT</button>
+    <button class="button2" onclick="icpfunc(7)">HUD</button>
+    <button class="button2" onclick="icpfunc(8)">OTHR</button>
+    <button class="button2" onclick="icpfunc(9)">DVR</button>
+    <div class="icpScreen icpInput">
+        <p> </p>
+        <p id="icpInputField12"> </p>
+        <p id="icpInputField11"> </p>
+        <p id="icpInputField10"> </p>
+        <p id="icpInputField9"> </p>
+        <p id="icpInputField8"> </p>
+        <p id="icpInputField7"> </p>
+        <p id="icpInputField6"> </p>
+        <p id="icpInputField5"> </p>
+        <p id="icpInputField4"> </p>
+        <p id="icpInputField3"> </p>
+        <p id="icpInputField2"> </p>
+        <p id="icpInputField1"> </p>  
+        <p> </p>
+    </div>
+    <button class="button2 triangle" onclick="icpoption(1)">&#9654</button>
+    <div class="icpScreen icp1 icpop">
+        <p id="icp1pre"></p>
+        <p id="icp1"></p>
+
+    </div>
+    <button class="button2" onclick="icpfunc(10)">A/P</button>
+    <p class="icpRight"></p>
+    <button class="button2" onclick="numInput(7)">7</button>
+    <button class="button2" onclick="numInput(8)">8</button>
+    <button class="button2" onclick="numInput(9)">9</button>
+    <button class="button2 triangle" onclick="icpoption(2)">&#9654</button>
+    <div class="icpScreen icp2 icpop">
+        <p id="icp2pre"></p>
+        <p id="icp2"></p>
+
+    </div>
+    <button class="button2" onclick="icpfunc(11)">MRK</button>
+    <button class="button2" onclick="numInput(4)">4</button>
+    <button class="button2" onclick="numInput(5)">5</button>
+    <button class="button2" onclick="numInput(6)">6</button>
+    <button class="button2 triangle"  onclick="icpoption(3)">&#9654</button>
+    <div class="icpScreen icp3 icpop">
+        <p id="icp3pre"></p>
+        <p id="icp3"></p>
+
+    </div>
+    <p></p>
+    <button class="button2" onclick="numInput(1)">1</button>
+    <button class="button2" onclick="numInput(2)">2</button>
+    <button class="button2" onclick="numInput(3)">3</button>
+    <button class="button2 triangle" onclick="icpoption(4)">&#9654</button>
+    <div class="icpScreen icp4 icpop">
+        <p id="icp4pre"></p>
+        <p id="icp4"></p>
+
+    </div>
+    <button class="button2 triangle" onclick="tabswitch(0)">&#9650</button>
+    <button class="button2" id="clr">CLR</button>
+    <button class="button2" onclick="numInput(0)">0</button>
+    <button class="button2">UNDO</button>
+    <button class="button2 triangle" onclick="icpoption(5)">&#9654</button>
+    <div class="icpScreen icp5 icpop">
+        <p id="icp5pre"></p>
+        <p id="icp5"></p>
+        
+    </div>
+    <button class="button2 triangle" onclick="tabswitch(1)">&#9660</button>
+</div>
+<div class="powermode">
+<button class="button5" onclick="power2()">POWER2</button>
+<button class="button5" onclick="power1()">POWER1</button>
+<button class="button5" onclick="basic()">BASIC</button>
+<button class="button5" onclick="enable1()">ENABLE</button>
+</div>
+<!-------------------------------------------------------------------------------------->
+<div class="ufd">
+    <p></p>
+    <button class="button4">&nbsp</button>
+    <p></p>
+    <div class="MFDScreen2">
+<!------COM-->
+        <p id="com1-1">uhf</p>
+        <p class="ufdmcol" style="color:red;">error1</p>
+        <p class="ufdrcol" id="com2-1">vhf</p>
+
+        <p id="com1-2">350.500 g</p>
+        <p class="ufdmcol" style="color:red;">error2</p>
+        <p class="ufdrcol" id="com2-2">150.500</p>
+
+        <p id="com1-3"></p>
+        <p class="ufdmcol" style="color:red;">error3</p>
+        <p class="ufdrcol" id="com2-3"></p>
+
+        <p id="com1-4"></p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol" id="com2-4"></p>
+<!------EMPTY-->
+        <p></p>
+        <p class="ufdmcol" style="color:yellow;">error4</p>
+        <p class="ufdrcol"></p>
+<!------   -->
+        <p>info</p>
+        <p class="ufdmcol" style="color:yellow;">error5</p>
+        <p class="ufdrcol" id="ifdl-1">info</p>
+
+        <p>info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol" id="jtids-1">info</p>
+
+        <p id="tacan-1">info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol" id="jtids-2">info</p>
+
+        <p id="ils-1">info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol">info</p>
+
+        <p>info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol">info</p>
+
+        <p>info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol">info</p>
+
+        <p>info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol">info</p>
+
+        <p>info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol">info</p>
+
+        <p>info</p>
+        <p class="ufdmcol"></p>
+        <p class="ufdrcol">info</p>
+    </div>
+    <button class="button4" onclick="testbutton()"></button>
+    <button class="button4"></button>
+    <button class="button4"></button>
+</div>
+<!-------------------------------------------------------------------------------------->
+<div class="info">
+    <div class="task">
+        <button>&#9664</button>
+        <h1>Task</h1>
+        <button>&#9654</button>
+    </div>
+    <div class="instructions">
+        <p>&nbsp</p>
+        <p>
+            instructions
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript" src="AvSPEC.js"></script>
+</body>
+</html>
